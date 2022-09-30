@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+body {
+  /* font-family: 'Open Sans', sans-serif; */
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+}
+
+/* common code here */
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+/* padding and margine */
+.pt-80 {
+  padding-top: 80px;
+}
+
+.pb-80 {
+  padding-bottom: 80px;
+}
+
+/* common title style */
+
+.section-title {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.section-title h2 {
+  font-size: 42px;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+  font-weight: 700;
+  position: relative;
+}
+.section-title p {
+}
+.section-title h2:before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color: tomato;
+  left: 50%;
+  bottom: -33%;
+  transform: translateX(-50%);
+}
+.section-title h2::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: tomato;
+  bottom: -20px;
+  transform: translateX(-50%);
+  right: 49%;
+  border-radius: 50%;
+}
+
+/* button style */
+
+.box-btn {
+  background-color: #ff3636;
+  padding: 10px 30px;
+  text-transform: capitalize;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+  color: #fff;
+}
+.box-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+.box-btn i {
+  position: absolute;
+  left: 3px;
+  visibility: hidden;
+  opacity: 0;
+}
+.box-btn:hover i {
+  left: 9px;
+  visibility: visible;
+  transition: 0.6s;
+  opacity: 1;
+}
+
+/* Header CSS */
+.header-area {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding: 20px 0;
+}
+.header-area a {
+  color: #fff !important;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+}
+.header-area .navbar-brand {
+  font-size: 30px;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+}
+.navbar-nav li a:hover {
+  color: tomato !important;
+}
+
+/* banner style start */
+
+.banner-area {
+  height: 100vh;
+  position: relative;
+  z-index: 5;
+}
+.banner-area:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  opacity: 0.75;
+}
+.banner-area video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -2;
+  object-fit: cover;
+}
+.banner-content {
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.banner-content h1 {
+  text-transform: uppercase;
+  font-size: 80px;
+  font-weight: 800;
+}
+.banner-content p {
+  font-size: 24px;
+}
+
+/* about style start */
+
+.about-content h1 {
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #fa3636;
+  font-size: 45px;
+}
+.about-content ul li i {
+  color: #fa3232;
+  margin-right: 5px;
+}
+.about-content ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* service style here */
+.service-section {
+  background-color: #f6f6f6;
+  text-align: center;
+}
+
+.single-service {
+  padding: 10px;
+  background-color: #fff;
+  position: relative;
+  margin-bottom: 25px;
+}
+.single-service span {
+  position: absolute;
+  content: "";
+  left: 6px;
+  font-size: 50px;
+  top: 15px;
+  color: #f2f2f2;
+}
+.single-service i {
+  font-size: 25px;
+  background-color: #fa3232;
+  color: #fff;
+  padding: 10px;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.single-service i:hover {
+  border-radius: 50%;
+}
+.single-service h4 {
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 15px 0;
+}
+.single-service p {
+  text-align: justify;
+  padding: 10px;
+}
+
+/* project style start */
+.single-project {
+  position: relative;
+  overflow: hidden;
+}
+.single-project img {
+}
+.project-content {
+}
+.project-hover {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.8s;
+  transform: scale(0) rotate(0);
+}
+.project-hover::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  visibility: visible;
+  z-index: -1;
+}
+
+.single-project:hover .project-hover {
+  visibility: visible;
+  opacity: 0.7;
+  background-color: #333;
+  z-index: 2;
+  transform: scale(1) rotate(360deg);
+}
+.project-content {
+  position: absolute;
+  content: "";
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.project-content a {
+}
+.project-content a i {
+  color: #fff;
+  font-size: 25px;
+  padding: 6px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.project-content h4 {
+  text-transform: capitalize;
+  color: #fff;
+  margin: 10px 0;
+  font-weight: 500;
+}
+.project-content h4 span {
+  display: block;
+  font-weight: 300;
+  font-size: 19px;
+}
